@@ -1,0 +1,156 @@
+
+.timeline {
+  position: relative;
+  padding-block: 10px;
+}
+
+.timeline::before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 1px;
+  background: linear-gradient(to bottom, var(--accent), transparent);
+  content: "";
+}
+
+.timeline-item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 55px;
+}
+
+.timeline-item.left .timeline-card {
+  grid-column: 1;
+  margin-right: 45px;
+}
+
+.timeline-item.right .timeline-card {
+  grid-column: 2;
+  margin-left: 45px;
+}
+
+.timeline-marker {
+  position: absolute;
+  top: 32px;
+  left: 50%;
+  z-index: 2;
+  width: 13px;
+  height: 13px;
+  transform: translateX(-50%);
+  border: 3px solid var(--accent);
+  border-radius: 50%;
+  background: var(--background);
+}
+
+.timeline-card {
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: #0d1220;
+}
+
+.timeline-image {
+  position: relative;
+  display: block;
+  aspect-ratio: 16 / 9;
+}
+
+.timeline-image img {
+  object-fit: cover;
+}
+
+.timeline-content {
+  padding: 24px;
+}
+
+.timeline-content h2 {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 23px;
+}
+
+.timeline-content p {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+.semester-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.semester-card {
+  position: relative;
+  overflow: hidden;
+  padding: 32px;
+  border: 1px solid var(--border);
+  border-radius: 17px;
+  background: #0d1220;
+}
+
+.semester-number {
+  position: absolute;
+  top: 10px;
+  right: 18px;
+  color: rgba(255, 255, 255, 0.05);
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 100px;
+  font-weight: 700;
+}
+
+.semester-card h2 {
+  position: relative;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 29px;
+}
+
+.semester-card > p {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.semester-projects {
+  margin-top: 25px;
+}
+
+.semester-project {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  padding-block: 15px;
+  border-top: 1px solid var(--border);
+  font-size: 13px;
+}
+
+.semester-project span {
+  color: var(--accent);
+}
+
+@media (max-width: 700px) {
+  .timeline::before {
+    left: 6px;
+  }
+
+  .timeline-item {
+    display: block;
+    padding-left: 27px;
+    margin-bottom: 35px;
+  }
+
+  .timeline-item.left .timeline-card,
+  .timeline-item.right .timeline-card {
+    margin: 0;
+  }
+
+  .timeline-marker {
+    top: 25px;
+    left: 6px;
+  }
+
+  .semester-grid {
+    grid-template-columns: 1fr;
+  }
+}
