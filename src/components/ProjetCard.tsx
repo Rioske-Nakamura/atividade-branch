@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import type { Projeto } from "@/data/projetos";
+import type { Projeto } from "../data/projetos";
 
 export default function ProjectCard({ projeto }: { projeto: Projeto }) {
   return (

@@ -1,6 +1,6 @@
 
-import ProjectCard from "@/components/ProjectCard";
-import { projetos } from "@/data/projetos";
+import ProjectCard from "../../components/ProjetCard";
+import { projetos } from "../../data/projetos";
 
 export default function ProjetosPage() {
   return (

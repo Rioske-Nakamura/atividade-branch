@@ -1,6 +1,6 @@
 
 import Link from "next/link";
-import { projetos } from "@/data/projetos";
+import { projetos } from "../../data/projetos";
 
 export default function SemestresPage() {
   const semestres = Array.from(

@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { projetos } from "@/data/projetos";
+import { projetos } from "../../../data/projetos";
 
 export function generateStaticParams() {
   return projetos.map((projeto) => ({ id: projeto.id }));

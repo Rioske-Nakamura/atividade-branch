@@ -1,7 +1,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { projetos } from "@/data/projetos";
+import { projetos } from "../data/projetos";
 
 export default function Timeline() {
   return (
