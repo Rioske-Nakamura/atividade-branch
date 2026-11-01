@@ -20,7 +20,7 @@ export default function ContatoPage() {
       mensagem,
     ].join("\n");
 
-    window.location.href = `mailto:?subject=${encodeURIComponent(
+    window.location.href = `mailto:${email}?subject=${encodeURIComponent(
       assunto
     )}&body=${encodeURIComponent(corpo)}`;
   }
