@@ -10,7 +10,7 @@ function calcularTempo() {
 
   return {
     dias: Math.floor(restante / 86400000),
-    horas: Math.floor((restante / 3600000) % 12),
+    horas: Math.floor((restante / 3600000) % 24),
     minutos: Math.floor((restante / 60000) % 60),
     segundos: Math.floor((restante / 1000) % 60),
     finalizado: restante === 0,
